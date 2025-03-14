@@ -68,7 +68,7 @@ public:
 int main() {
     // Parametri generali della simulazione
     double dt = 0.001;   // passo temporale (s)
-    double t_end = 5.0;  // durata simulazione (s)
+    double t_end = 60.0;  // durata simulazione (s)
     int steps = static_cast<int>(t_end / dt);
 
     // --- Simulazione 1: Controllo dell'equilibrio su piano inclinato ---
@@ -154,7 +154,7 @@ int main() {
     gp << "set output 'simulation1.png'\n";
     gp << "set title 'Simulazione 1: Controllo Equilibrio su Piano Inclinato'\n";
     gp << "set xlabel 'Tempo (s)'\n";
-    gp << "set ylabel 'Posizione (m) e Velocita'\\'' (m/s)'\n";
+    gp << "set ylabel \"Posizione (m) e Velocita (m/s)\"\n";
     gp << "plot 'simulation1.csv' using 1:2 title 'Posizione (x)' with lines, \\\n";
     gp << "     'simulation1.csv' using 1:3 title 'Velocita (v)' with lines\n";
 
